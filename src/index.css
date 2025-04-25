@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sparkline {
+  fill: none;
+  stroke-width: 2;
+  min-width: 100px;
+}
+
+.sparkline-positive {
+  stroke: #10b981;
+}
+
+.sparkline-negative {
+  stroke: #ef4444;
+}
+
+.price-up {
+  animation: flash-green 1s;
+}
+
+.price-down {
+  animation: flash-red 1s;
+}
+
+@keyframes flash-green {
+  0% {
+    background-color: rgba(16, 185, 129, 0.2);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes flash-red {
+  0% {
+    background-color: rgba(239, 68, 68, 0.2);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
